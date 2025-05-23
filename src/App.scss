@@ -2,6 +2,7 @@ $primary-color: #ffd700;
 
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
+@import '~loaders.css/src/animations/line-scale-pulse-out.scss';
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -18,10 +19,10 @@ $primary-color: #ffd700;
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
 
-input,
-text area {
-  font-family: 'Helvetica Neue';
-}
+// input,
+// text area {
+//   font-family: 'Helvetica Neue';
+// }
 
 .loader-active {
   display: block;
