@@ -17,16 +17,17 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
-    emailjs.sendForm('gmail', 'YOUR TEMPLATEID', refForm.current, 'USER TOKEN')
-    .then(
-      () => {
-        alert('Message successfully sent!')
-        window.location.reload(false)
-      },
-      () => {
-        alert('Failed to send the message, please try again.')
-      }
-    )
+    emailjs
+      .sendForm('gmail', 'YOUR TEMPLATEID', refForm.current, 'USER TOKEN')
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('Failed to send the message, please try again.')
+        }
+      )
   }
 
   return (
