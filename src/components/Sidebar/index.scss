@@ -1,17 +1,17 @@
 .nav-bar {
   background: #231d27;
-  width: 30%;
-  height: 80px;
+padding: 8px 20px;
+  height: 50px;
   position: absolute;
   border: 0px;
   border-radius: 100px;
-  top: 10px;
+  top: 25px;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 3;
   // min-height: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   .logo {
@@ -57,8 +57,7 @@
 
 nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+
   // position: absolute;
   // height: 40px;
   // top: 50%;
@@ -67,8 +66,9 @@ nav {
 
   a {
     font-size: 22px;
-    color: #4d4d4e;
+    color: #988FB2;
     display: block;
+    margin: 0px 25px;
     line-height: 51px;
     height: 51px;
     position: relative;
@@ -79,7 +79,7 @@ nav {
     }
 
     &:hover {
-      color: #ffd700;
+      color: #9B8DFF;
 
       svg {
         opacity: 0;
@@ -124,7 +124,7 @@ nav {
 
   a.active {
     svg {
-      color: #ffd700;
+      color: #7E4AE7;
     }
   }
 }
