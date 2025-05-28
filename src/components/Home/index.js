@@ -5,26 +5,14 @@ import LogoTitle from '../../assets/images/logo-s.png'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
 import './index.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
-  const jobArray = [
-    'w',
-    'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-    '.',
-  ]
+  const firstArray = "Hey, I'm Faye".split('')
+  const nameArray = 'Web developer &'.split('')
+  const jobArray = 'web designer.'.split('')
 
   useEffect(() => {
     setTimeout(() => {
@@ -36,13 +24,15 @@ const Home = () => {
     <>
       <div className="container home-page">
         <div className="text-zone">
-          <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _12`}>i,</span>
-            <br />
-            <span className={`${letterClass} _13`}>I</span>
-            <span className={`${letterClass} _14`}>'m</span>
-            <img src={LogoTitle} alt="developer" />
+          <h1 className="sub-header">
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={firstArray}
+              idx={10}
+            />
+          </h1>
+          <br />
+          <h1 className="header">
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
@@ -55,10 +45,26 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Frontend Developer / JavaScript Expert / YouTuber</h2>
-          <Link to="/contact" className="flat-button">
-            CONTACT ME
-          </Link>
+          <h2>Frontend Developer | Freelancer</h2>
+          <div className='contact'>
+            <Link to="/contact" className="flat-button">
+              Contact Me
+            </Link>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/fayesadev"
+            >
+              <FontAwesomeIcon icon={faGithub} size="2x" color="#7E4AE7" />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/dumbrigue/"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x"color="#7E4AE7" />
+            </a>
+          </div>
         </div>
         <Logo />
       </div>
