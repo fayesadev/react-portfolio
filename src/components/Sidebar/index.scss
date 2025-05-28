@@ -1,6 +1,6 @@
 .nav-bar {
   background: #231d27;
-padding: 8px 20px;
+  padding: 8px 20px;
   height: 50px;
   position: absolute;
   border: 0px;
@@ -66,7 +66,7 @@ nav {
 
   a {
     font-size: 22px;
-    color: #988FB2;
+    color: #988fb2;
     display: block;
     margin: 0px 25px;
     line-height: 51px;
@@ -79,7 +79,7 @@ nav {
     }
 
     &:hover {
-      color: #9B8DFF;
+      color: #9b8dff;
 
       svg {
         opacity: 0;
@@ -116,6 +116,12 @@ nav {
     }
   }
 
+  a.resume-link {
+    &:after {
+      content: 'RESUME';
+    }
+  }
+
   a.contact-link {
     &:after {
       content: 'CONTACT';
@@ -124,7 +130,7 @@ nav {
 
   a.active {
     svg {
-      color: #7E4AE7;
+      color: #7e4ae7;
     }
   }
 }
