@@ -7,17 +7,14 @@ import {
   faEnvelope,
   faHome,
   faUser,
-  faLinkedin,
-  faGithub,
-  faPhoneVolume
 } from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => (
   <div className="nav-bar">
-    <Link className="logo" to="/">
+    {/* <Link className="logo" to="/">
       <img src={LogoS} alt="logo" />
       <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
-    </Link>
+    </Link> */}
     <nav>
       <NavLink exact="true" activeclassname="active" to="/">
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
@@ -39,26 +36,6 @@ const Sidebar = () => (
         <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
       </NavLink>
     </nav>
-    <ul>
-      <li>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.linkedin.com/in/dumbrigue/"
-        >
-          <FontAwesomeIcon icon={faPhoneVolume} color="#4d4d4e" />
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/fayesadev"
-        >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-        </a>
-      </li>
-    </ul>
   </div>
 )
 

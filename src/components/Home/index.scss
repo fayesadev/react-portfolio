@@ -9,7 +9,7 @@
   }
 
   h1 {
-    color: #E0DAED;
+    color: #e0daed;
     font-size: 64px;
     margin: 0;
     font-family: 'Sora';
@@ -25,7 +25,7 @@
       font-family: 'Chivo Mono', monospace;
       letter-spacing: 0;
       font-weight: 400;
-      color: #7E4AE7;
+      color: #7e4ae7;
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
@@ -42,22 +42,22 @@
       font-family: 'Chivo Mono', monospace;
       letter-spacing: 0;
       font-weight: 400;
-      color: #7E4AE7;
+      color: #7e4ae7;
+      opacity: 0.6;
       font-size: 18px;
       position: absolute;
       margin-top: 18px;
       margin-left: 20px;
-      animation: fadeIn 1s 1.7s backwards;
-      opacity: 0.6;
+      animation: fadeIn 1s 3.2s backwards;
     }
   }
 
   h2 {
-    color: #988FB2;
+    color: #988fb2;
     margin-top: 30px;
     font-weight: 400;
     font-size: 16px;
-    font-family: "Noto Sans", sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0px;
     animation: fadeIn 1s 1.8s backwards;
   }
@@ -69,31 +69,31 @@
       display: flex;
       align-items: center;
     }
-  }
 
-  a {
-    margin-right: 15px;
-    float: left;
-  }
+    a {
+      margin-right: 15px;
+      float: left;
+    }
 
-  .flat-button {
-    color: #7E4AE7;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-family: "Noto Sans", sans-serif;
-    text-decoration: none;
-    padding: 8px 45px;
-    border: 1px solid #7E4AE7;
-    border-radius: 30px;
-    float: left;
-    animation: fadeInAnimation 1s 1.8s backwards;
-    white-space: nowrap;
+    .flat-button {
+      color: #7e4ae7;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-family: 'Noto Sans', sans-serif;
+      text-decoration: none;
+      padding: 8px 45px;
+      border: 1px solid #7e4ae7;
+      border-radius: 30px;
+      float: left;
 
-    &:hover {
-      background: #7E4AE7;
-      color: #100914;
-      animation: fadeInAnimation 1s 1.8s backwards;
+      white-space: nowrap;
+
+      &:hover {
+        background: #7e4ae7;
+        color: #100914;
+        transition: 0.4s;
+      }
     }
   }
 }
