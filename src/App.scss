@@ -42,3 +42,13 @@ $primary-color: #7e4ae7;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+
+::selection {
+  color: #231D27;
+  background: #9B8DFF;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #231D27;
+  background: #9B8DFF;
+}

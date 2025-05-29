@@ -32,6 +32,7 @@ const Sidebar = () => (
         exact="true"
         activeclassname="active"
         className="resume-link"
+        target="_blank"
         to="https://flowcv.com/resume/rdsgiel4le"
       >
         <FontAwesomeIcon icon={faFile} color="#988FB2" />

@@ -51,29 +51,36 @@
     max-height: 90%;
 
     h1 {
-      font-size: 53px;
-      font-family: 'Coolvetica';
-      color: #ffd700;
-      font-weight: 400;
+      font-size: 64px;
+      font-family: 'Sora';
+      color: #e0daed;
+      font-weight: 700;
+      letter-spacing: -3px;
       margin-top: 0;
       position: relative;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
       left: 10px;
 
       &::before {
         content: '<h1>';
-        font-family: 'La Belle Aurore';
+        font-family: 'Chivo Mono', monospace;
+        letter-spacing: 0;
+        font-weight: 400;
+        color: #7e4ae7;
         font-size: 18px;
         position: absolute;
-        margin-top: -10px;
+        margin-top: -30px;
         left: -10px;
         opacity: 0.6;
         line-height: 18px;
       }
 
       &::after {
-        content: '<h1 />';
-        font-family: 'La Belle Aurore';
+        content: '<h1/>';
+        font-family: 'Chivo Mono', monospace;
+        letter-spacing: 0;
+        font-weight: 400;
+        color: #7e4ae7;
         font-size: 18px;
         line-height: 18px;
         position: absolute;
@@ -85,10 +92,12 @@
     }
 
     p {
-      font-size: 13px;
-      color: #fff;
-      font-family: sans-serif;
-      font-weight: 300;
+      font-size: 16px;
+      color: #988FB2;
+      letter-spacing: 0px;
+      font-family: 'Noto Sans', sans-serif;
+      line-height: 25px;
+      font-weight: 400;
       min-width: fit-content;
       animation: pulse 1s;
 
@@ -106,7 +115,7 @@
 
   .text-animate-hover {
     &:hover {
-      color: #fff;
+      color: #7e4ae7;
     }
   }
 }

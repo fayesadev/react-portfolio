@@ -35,18 +35,22 @@ const About = () => {
             />
           </h1>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            Hi! I’m a self-motivated and detail-oriented web developer with a
+            passion for turning ideas into interactive, user-friendly websites.
+            I’ve gained hands-on experience in web design through building and
+            customizing websites using platforms like Shopify, Squarespace and
+            Wix-- helping clients bring their ideas to life with clean layouts
+            and intuitive user experiences.
           </p>
           <p>
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            Recently, I’ve deepened my front-end development skills with HTML,
+            CSS, JavaScript and React, and built a growing portfolio of
+            responsive websites and dynamic web apps. I love solving problems,
+            learning new tools and writing clean, efficient code.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+            When I’m not coding, you’ll find me playing volleyball, hiking in
+            the mountains or dancing at the next music festival!
           </p>
         </div>
 
@@ -74,7 +78,7 @@ const About = () => {
         </div>
       </div>
 
-      <Loader type="pacman" />
+      <Loader type="line-scale-pulse-out" />
     </>
   )
 }

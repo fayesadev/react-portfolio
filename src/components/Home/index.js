@@ -66,7 +66,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <Logo />
+        {/* <Logo /> */}
       </div>
       <Loader type="line-scale-pulse-out" />
     </>
