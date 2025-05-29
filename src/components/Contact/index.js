@@ -42,9 +42,7 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
-            or large projects. However, if you have any other requests or
-            questions, don't hesitate to contact me using below form either.
+            Have a website in mind? Let’s connect!
           </p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
@@ -76,7 +74,7 @@ const Contact = () => {
                   ></textarea>
                 </li>
                 <li>
-                  <input type="submit" className="flat-button" value="SEND" />
+                  <input type="submit" className="flat-button" value="Send" />
                 </li>
               </ul>
             </form>
