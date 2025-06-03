@@ -1,7 +1,15 @@
 {
   "portfolio" : [
     {
-      "cover": "/public/portfolio/edupower.png",
+      "cover": "/portfolio/edupower.png",
+      "title": "Edupower Academy",
+      "year": "2024",
+      "description": "Lorem ipsum",
+      "stack": ["Wix", "SEO"],
+      "url": "https://edupoweracademy.ca"
+    },
+    {
+      "cover": "/portfolio/edupower.png",
       "title": "Edupower Academy",
       "year": "2024",
       "description": "Lorem ipsum",

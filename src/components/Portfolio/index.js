@@ -5,9 +5,9 @@ import portfolioData from '../../data/portfolio.json'
 import Loader from 'react-loaders'
 
 const Portfolio = () => {
-  const portfolioArray = 'My Projects'.split('');
+  const portfolioArray = 'My Projects'.split('')
 
-  const [letterClass, setLetterClass] = useState('text-animate');
+  const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,20 +15,36 @@ const Portfolio = () => {
     }, 3000)
   }, [])
 
+  const renderPortfolio = (portfolio) => {
+    return (
+      <div className="images-container">
+        {portfolio.map((port, idx) => {
+          return (
+            <div className="image-box" key={idx}>
+              <img
+                src={port.cover}
+                className="portfolio-image"
+                alt="portfolio"
+              />
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
   return (
     <>
       <div className="container portfolio-page">
-        <div className="text-zone">
-          <h1>
+        
+          <h1 className="page-title">
             <AnimatedLetters
               letterClass={letterClass}
               strArray={portfolioArray}
               idx={15}
             />
           </h1>
-          <div></div>
-
-        </div>
+          <div>{renderPortfolio(portfolioData.portfolio)}</div>
+       
       </div>
       <Loader type="line-scale-pulse-out" />
     </>
