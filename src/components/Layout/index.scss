@@ -39,7 +39,7 @@
 }
 
 .about-page,
-.contact-page {
+.contact-page, .portfolio-page {
   .text-zone {
     position: absolute;
     left: 10%;
@@ -76,7 +76,7 @@
       }
 
       &::after {
-        content: '<h1/>';
+        content: '</h1>';
         font-family: 'Chivo Mono', monospace;
         letter-spacing: 0;
         font-weight: 400;

@@ -7,7 +7,8 @@ import {
   faEnvelope,
   faHome,
   faUser,
-  faFile
+  faFile,
+  faFolderOpen
 } from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => (
@@ -36,6 +37,14 @@ const Sidebar = () => (
         to="https://flowcv.com/resume/rdsgiel4le"
       >
         <FontAwesomeIcon icon={faFile} color="#988FB2" />
+      </NavLink>
+      <NavLink
+        exact="true"
+        activeclassname="active"
+        className="portfolio-link"
+        to="/portfolio"
+      >
+        <FontAwesomeIcon icon={faFolderOpen} color="#988FB2" />
       </NavLink>
       <NavLink
         exact="true"

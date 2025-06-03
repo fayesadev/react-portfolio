@@ -98,6 +98,12 @@ nav {
     }
   }
 
+  a.portfolio-link {
+    &:after {
+      content: 'PROJECTS';
+    }
+  }
+
   a.contact-link {
     &:after {
       content: 'CONTACT';

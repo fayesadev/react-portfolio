@@ -70,5 +70,11 @@
     float: right;
     border-radius: 30px;
     white-space: nowrap;
+    
+     &:hover {
+        background: #7e4ae7;
+        color: #100914;
+        transition: 0.4s;
+      }
   }
 }
