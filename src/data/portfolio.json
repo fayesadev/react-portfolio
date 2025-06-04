@@ -1,20 +1,58 @@
 {
-  "portfolio" : [
+  "portfolio": [
     {
       "cover": "/portfolio/edupower.png",
       "title": "Edupower Academy",
       "year": "2024",
-      "description": "Lorem ipsum",
-      "stack": ["Wix", "SEO"],
-      "url": "https://edupoweracademy.ca"
+      "description": "Youth education program",
+      "stack": ["Wix"],
+      "url": "https://www.edupoweracademy.ca/"
     },
     {
-      "cover": "/portfolio/edupower.png",
-      "title": "Edupower Academy",
+      "cover": "/portfolio/bic.png",
+      "title": "Bigger Ideas Conference",
       "year": "2024",
-      "description": "Lorem ipsum",
-      "stack": ["Wix", "SEO"],
-      "url": "https://edupoweracademy.ca"
+      "description": "Vancouver conference",
+      "stack": ["Wix"],
+      "url": "https://www.biggerideasconference.com/"
+    },
+    {
+      "cover": "/portfolio/efe.png",
+      "title": "Efe Fruci",
+      "year": "2024",
+      "description": "Personal portfolio",
+      "stack": ["Squarespace"],
+      "url": "https://www.efefruci.com/"
+    },
+    {
+      "cover": "/portfolio/nutritionship.png",
+      "title": "Nutritionship",
+      "year": "2023",
+      "description": "Food and macronutrient tracker",
+      "stack": [
+        "JavaScript",
+        "React",
+        "PostgreSQL",
+        "MaterialUI",
+        "TailwindCSS"
+      ],
+      "url": "https://github.com/fayesadev/food-tracking-app"
+    },
+    {
+      "cover": "/portfolio/scheduler.png",
+      "title": "Interview Scheduler",
+      "year": "2023",
+      "description": "Scheduling app",
+      "stack": ["JavaScript", "React", "Jest", "Cypress", "WebSocket"],
+      "url": "https://github.com/fayesadev/scheduler"
+    },
+    {
+      "cover": "/portfolio/mealhub.png",
+      "title": "MealHub",
+      "year": "2023",
+      "description": "Restaurant takeout app",
+      "stack": ["JavaScript", "SASS", "jQuery", "AJAX", "Node", "Express", "PostgreSQL", "WebSocket"],
+      "url": "https://github.com/fayesadev/food-pickup-midterm"
     }
   ]
 }

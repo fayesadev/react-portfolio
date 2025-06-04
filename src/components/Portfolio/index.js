@@ -29,6 +29,15 @@ const Portfolio = () => {
               <div className="content">
                 <p className="title">{port.title}</p>
                 <h4 className="description">{port.description}</h4>
+                <div className="stack-container">
+                  {port.stack.map((stack) => {
+                    return (
+                      <div className="stack-box">
+                        {stack}
+                      </div>
+                    )
+                  })}
+                </div>
                 <button className="btn" onClick={() => window.open(port.url)}>
                   View
                 </button>
