@@ -5,7 +5,7 @@ import portfolioData from '../../data/portfolio.json'
 import Loader from 'react-loaders'
 
 const Portfolio = () => {
-  const portfolioArray = 'My Projects'.split('')
+  const portfolioArray = 'Portfolio'.split('')
 
   const [letterClass, setLetterClass] = useState('text-animate')
 
@@ -28,16 +28,12 @@ const Portfolio = () => {
               />
               <div className="content">
                 <p className="title">{port.title}</p>
-                <h4 className="description">{port.description}</h4>
                 <div className="stack-container">
                   {port.stack.map((stack) => {
-                    return (
-                      <div className="stack-box">
-                        {stack}
-                      </div>
-                    )
+                    return <div className="stack-box">{stack}</div>
                   })}
                 </div>
+                <h4 className="description">{port.description}</h4>
                 <button className="btn" onClick={() => window.open(port.url)}>
                   View
                 </button>
