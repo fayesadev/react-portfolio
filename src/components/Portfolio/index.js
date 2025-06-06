@@ -5,7 +5,7 @@ import portfolioData from '../../data/portfolio.json'
 import Loader from 'react-loaders'
 
 const Portfolio = () => {
-  const portfolioArray = 'Portfolio'.split('')
+  const portfolioArray = 'My Portfolio'.split('')
 
   const [letterClass, setLetterClass] = useState('text-animate')
 
