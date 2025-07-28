@@ -7,6 +7,7 @@ import Logo from './Logo'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import ProfileImage from './faye.png'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -66,7 +67,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        {/* <Logo /> */}
+  <Logo /> 
       </div>
       <Loader type="line-scale-pulse-out" />
     </>

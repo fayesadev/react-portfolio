@@ -117,7 +117,7 @@ nav {
   }
 }
 
-.hamburger-icon {
+.hamburger-icon, .close-icon {
   display: none;
 }
 
@@ -133,7 +133,6 @@ nav {
   }
 
   nav {
-    display: block;
     width: 100%;
     height: 100%;
     background: #ffffff;
@@ -146,7 +145,7 @@ nav {
     a {
       display: flex;
       justify-content: center;
-      align-content: center;
+      align-items: center;
     }
   
     a:after {
@@ -165,7 +164,7 @@ nav {
     }
   }
 
-  .hamburger-icon {
+  .hamburger-icon, .close-icon {
     display: block;
     position: absolute;
     top: 15px;

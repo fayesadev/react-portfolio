@@ -1,5 +1,13 @@
 {
   "portfolio": [
+     {
+      "cover": "/portfolio/refine.png",
+      "title": "Refine Medispa",
+      "year": "2025",
+      "description": "Medical spa services and ecommerce",
+      "stack": ["Shopify", "Liquid"],
+      "url": "https://refinemedispa.ca/"
+    },
     {
       "cover": "/portfolio/edupower.png",
       "title": "Edupower Academy",
