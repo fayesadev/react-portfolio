@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router'
 import Loader from 'react-loaders'
-import LogoTitle from '../../assets/images/logo-s.png'
 import AnimatedLetters from '../AnimatedLetters'
 import Logo from './Logo'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import ProfileImage from './faye.png'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -47,7 +45,7 @@ const Home = () => {
             />
           </h1>
           <h2>Frontend Developer | Freelancer</h2>
-          <div className='contact'>
+          <div className="contact">
             <Link to="/contact" className="flat-button">
               Contact Me
             </Link>
@@ -63,11 +61,11 @@ const Home = () => {
               rel="noreferrer"
               href="https://www.linkedin.com/in/dumbrigue/"
             >
-              <FontAwesomeIcon icon={faLinkedin} size="2x"color="#7E4AE7" />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" color="#7E4AE7" />
             </a>
           </div>
         </div>
-  <Logo /> 
+        <Logo />
       </div>
       <Loader type="line-scale-pulse-out" />
     </>
