@@ -14,11 +14,15 @@ const Contact = () => {
     }, 3000)
   }, [])
 
+  const SERVICEID = process.env.REACT_APP_SERVICE_ID;
+  const TEMPLATEID = process.env.REACT_APP_TEMPLATE_ID;
+  const PUBLICKEY = process.env.REACT_APP_PUBLIC_KEY;
+
   const sendEmail = (e) => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'YOUR TEMPLATEID', refForm.current, 'USER TOKEN')
+      .sendForm(SERVICEID, TEMPLATEID, refForm.current, PUBLICKEY)
       .then(
         () => {
           alert('Message successfully sent!')
