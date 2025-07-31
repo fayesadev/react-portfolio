@@ -13,6 +13,7 @@ import {
   faShopify,
   faWix,
 } from '@fortawesome/free-brands-svg-icons'
+import fayeStars from '../../assets/images/fayestars.png'
 
 const About = () => {
   const aboutArray = 'About Me'.split('')
@@ -56,7 +57,10 @@ const About = () => {
           </p>
         </div>
 
-        <div className="stage-cube-cont">
+        <div className="profile-image">
+          <img src={fayeStars} />
+        </div>
+        {/* <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
               <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
@@ -77,7 +81,7 @@ const About = () => {
               <FontAwesomeIcon icon={faShopify} color="#95BF47" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <Loader type="line-scale-pulse-out" />

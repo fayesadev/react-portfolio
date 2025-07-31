@@ -9,6 +9,15 @@
   overflow: hidden;
 }
 
+.profile-image {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+
+  img {
+    width: 500px;
+  }
+}
 .cubespinner {
   animation-name: spincube;
   animation-timing-function: ease-in-out;
