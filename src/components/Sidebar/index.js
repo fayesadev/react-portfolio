@@ -11,11 +11,15 @@ import {
   faBars,
   faClose
 } from '@fortawesome/free-solid-svg-icons'
+import fayelogocolor from '../../assets/images/fayelogocolor.png'
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false)
   return (
     <div className="nav-bar">
+      {/* <Link className="logo" to="/" onClick={() => setShowNav(false)}>
+        <img src={fayelogocolor} alt="Logo" />
+      </Link> */}
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink exact="true" activeclassname="active" to="/">
           <FontAwesomeIcon icon={faHome} color="#988FB2" />
