@@ -15,15 +15,14 @@ import fayelogocolor from '../../assets/images/fayelogocolor.png'
 
 const Sidebar = () => {
   const [showNav, setShowNav] = useState(false)
+  
+  const closeNav = () => setShowNav(false)
+  
   return (
     <div className="nav-bar">
-      {/* <Link className="logo" to="/" onClick={() => setShowNav(false)}>
-        <img src={fayelogocolor} alt="Logo" />
-      </Link> */}
-
+      {/* Desktop/Mobile Navigation */}
       <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink exact="true" activeclassname="active" to="/">
-          {/* <FontAwesomeIcon icon={faHome} color="#988FB2" /> */}
+        <NavLink exact="true" activeclassname="active" to="/" onClick={closeNav}>
           Home
         </NavLink>
         <NavLink
@@ -31,8 +30,8 @@ const Sidebar = () => {
           activeclassname="active"
           className="about-link"
           to="/about"
+          onClick={closeNav}
         >
-          {/* <FontAwesomeIcon icon={faUser} color="#988FB2" /> */}
           About
         </NavLink>
         <NavLink
@@ -41,8 +40,8 @@ const Sidebar = () => {
           className="resume-link"
           target="_blank"
           to="https://flowcv.com/resume/rdsgiel4le"
+          onClick={closeNav}
         >
-          {/* <FontAwesomeIcon icon={faFile} color="#988FB2" /> */}
           Resume
         </NavLink>
         <NavLink
@@ -50,8 +49,8 @@ const Sidebar = () => {
           activeclassname="active"
           className="portfolio-link"
           to="/portfolio"
+          onClick={closeNav}
         >
-          {/* <FontAwesomeIcon icon={faFolderOpen} color="#988FB2" /> */}
           Portfolio
         </NavLink>
         <NavLink
@@ -59,12 +58,13 @@ const Sidebar = () => {
           activeclassname="active"
           className="contact-link"
           to="/contact"
+          onClick={closeNav}
         >
-          {/* <FontAwesomeIcon icon={faEnvelope} color="#988FB2" /> */}
           Contact
         </NavLink>
       </nav>
 
+      {/* Close icon - moved outside of nav */}
       {showNav && (
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}
@@ -75,6 +75,7 @@ const Sidebar = () => {
         />
       )}
 
+      {/* Hamburger menu icon - only show when nav is closed */}
       {!showNav && (
         <FontAwesomeIcon
           onClick={() => setShowNav(true)}

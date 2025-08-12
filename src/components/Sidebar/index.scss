@@ -74,11 +74,9 @@ nav a {
   text-decoration: none;
   text-align: center;
   border-radius: 50px;
-  font-size: 2rem;
+  font-size: 18px;
   font-weight: 400;
   transition: all 0.3s ease;
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav a:hover {
@@ -86,7 +84,6 @@ nav a:hover {
   border-color: rgba(85, 75, 105, 0.9);
   transform: translateY(-1px);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 nav a:active,
@@ -137,14 +134,13 @@ nav.mobile-show a:nth-child(5) { animation-delay: 0.3s; }
     transform: none;
     opacity: 1;
     visibility: visible;
-    background: rgba(55, 48, 70, 0.9);
+    background: #231D27;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(167, 139, 250, 0.2);
     border-radius: 50px;
     flex-direction: row;
     height: auto;
     width: auto;
-    padding: 0.5rem;
+    padding: 1.2rem 2.5rem;
     gap: 0;
     justify-content: center;
     align-items: center;
@@ -159,26 +155,30 @@ nav.mobile-show a:nth-child(5) { animation-delay: 0.3s; }
     max-width: none;
     background: transparent;
     border: none;
-    border-radius: 30px;
-    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    padding: 0.8rem 1.8rem;
     margin: 0;
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-family: Sora;
+    font-weight: 300;
     transition: all 0.3s ease;
     animation: none;
+    box-shadow: none;
+    color: #ffffff;
   }
   
   nav a:hover {
-    background-color: rgba(167, 139, 250, 0.2);
-    border-color: transparent;
+    background-color: transparent;
+    border: none;
     transform: none;
-    color: #ffffff;
+    color: #a78bfa;
   }
   
   nav a.active {
-    background-color: rgba(167, 139, 250, 0.3);
+    background-color: transparent;
     border-color: transparent;
-    color: #ffffff;
+    font-weight: 700;
+    color: #9B8DFF;
   }
 }
 
@@ -187,7 +187,7 @@ nav.mobile-show a:nth-child(5) { animation-delay: 0.3s; }
   nav a {
     max-width: 280px;
     padding: 0.9rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
   
   .hamburger-icon,
