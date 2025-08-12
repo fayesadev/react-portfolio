@@ -9,7 +9,7 @@ import {
   faFile,
   faFolderOpen,
   faBars,
-  faClose
+  faClose,
 } from '@fortawesome/free-solid-svg-icons'
 import fayelogocolor from '../../assets/images/fayelogocolor.png'
 
@@ -20,9 +20,11 @@ const Sidebar = () => {
       {/* <Link className="logo" to="/" onClick={() => setShowNav(false)}>
         <img src={fayelogocolor} alt="Logo" />
       </Link> */}
+
       <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink exact="true" activeclassname="active" to="/">
-          <FontAwesomeIcon icon={faHome} color="#988FB2" />
+          {/* <FontAwesomeIcon icon={faHome} color="#988FB2" /> */}
+          Home
         </NavLink>
         <NavLink
           exact="true"
@@ -30,7 +32,8 @@ const Sidebar = () => {
           className="about-link"
           to="/about"
         >
-          <FontAwesomeIcon icon={faUser} color="#988FB2" />
+          {/* <FontAwesomeIcon icon={faUser} color="#988FB2" /> */}
+          About
         </NavLink>
         <NavLink
           exact="true"
@@ -39,7 +42,8 @@ const Sidebar = () => {
           target="_blank"
           to="https://flowcv.com/resume/rdsgiel4le"
         >
-          <FontAwesomeIcon icon={faFile} color="#988FB2" />
+          {/* <FontAwesomeIcon icon={faFile} color="#988FB2" /> */}
+          Resume
         </NavLink>
         <NavLink
           exact="true"
@@ -47,7 +51,8 @@ const Sidebar = () => {
           className="portfolio-link"
           to="/portfolio"
         >
-          <FontAwesomeIcon icon={faFolderOpen} color="#988FB2" />
+          {/* <FontAwesomeIcon icon={faFolderOpen} color="#988FB2" /> */}
+          Portfolio
         </NavLink>
         <NavLink
           exact="true"
@@ -55,23 +60,30 @@ const Sidebar = () => {
           className="contact-link"
           to="/contact"
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#988FB2" />
+          {/* <FontAwesomeIcon icon={faEnvelope} color="#988FB2" /> */}
+          Contact
         </NavLink>
-        <FontAwesomeIcon 
-        onClick={() => setShowNav(false)}
-        icon={faClose} 
-        color="#988FB2"
-        size="3x"
-        className='close-icon'
-        />
       </nav>
-      <FontAwesomeIcon
-        onClick={() => setShowNav(true)}
-        icon={faBars}
-        color="#988FB2"
-        size="3x"
-        className="hamburger-icon"
-      />
+
+      {showNav && (
+        <FontAwesomeIcon
+          onClick={() => setShowNav(false)}
+          icon={faClose}
+          color="#988FB2"
+          size="3x"
+          className="close-icon"
+        />
+      )}
+
+      {!showNav && (
+        <FontAwesomeIcon
+          onClick={() => setShowNav(true)}
+          icon={faBars}
+          color="#988FB2"
+          size="3x"
+          className="hamburger-icon"
+        />
+      )}
     </div>
   )
 }
