@@ -1,42 +1,50 @@
-/* Desktop Styles (your existing code with improvements) */
+/* Desktop Styles */
 .home-page {
   position: relative;
   width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
 
   .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 90%;
+    flex: 1;
+    max-width: 55%;
+    padding-right: 60px;
+    order: 1; /* Ensure text comes first on desktop */
   }
 
-  /* Logo positioning */
+  .logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
   .logo {
-    position: absolute;
-    right: 8%;
-    top: 50%;
-    transform: translateY(-50%);
     width: auto;
     height: 400px;
-    max-width: 45%;
+    max-width: 450px;
     object-fit: contain;
     z-index: 1;
   }
 
   h1 {
     color: #e0daed;
-    font-size: 64px;
+    font-size: 80px;
     margin: 0;
     font-family: 'Sora';
     font-weight: 700;
+    line-height: 1.1;
   }
 
   .sub-header {
-    font-size: 32px;
-    letter-spacing: -0.5px;
+    font-size: 48px;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    position: relative;
 
     &::before {
       content: '<h1>';
@@ -47,13 +55,16 @@
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
-      left: -15px;
       opacity: 0.6;
+      animation: fadeIn 1s 3.2s backwards;
+    
     }
   }
 
   .header {
     letter-spacing: -3px;
+    margin-bottom: 30px;
+    position: relative;
 
     &::after {
       content: '</h1>';
@@ -73,25 +84,18 @@
   h2 {
     color: #988fb2;
     margin-top: 30px;
+    margin-bottom: 45px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0px;
     animation: fadeIn 1s 1.8s backwards;
   }
 
-  div {
-    .contact {
-      padding: 0;
-      margin-top: 45px;
-      display: flex;
-      align-items: center;
-    }
-
-    a {
-      margin-right: 15px;
-      float: left;
-    }
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
     .flat-button {
       color: #7e4ae7;
@@ -100,17 +104,40 @@
       letter-spacing: 1px;
       font-family: 'Noto Sans', sans-serif;
       text-decoration: none;
-      padding: 8px 45px;
+      padding: 12px 48px;
       border: 1px solid #7e4ae7;
       border-radius: 30px;
-      float: left;
       white-space: nowrap;
+      transition: all 0.4s ease;
 
       &:hover {
         background: #7e4ae7;
         color: #100914;
-        transition: 0.4s;
       }
+    }
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1400px) {
+  .home-page {
+    padding: 0 8%;
+
+    .logo {
+      height: 500px;
+      max-width: 550px;
+    }
+
+    h1 {
+      font-size: 96px;
+    }
+
+    .sub-header {
+      font-size: 56px;
+    }
+
+    h2 {
+      font-size: 20px;
     }
   }
 }
@@ -118,23 +145,54 @@
 /* Tablet Styles */
 @media (max-width: 1024px) {
   .home-page {
+    padding: 80px 5% 40px 5%; /* Add top padding to avoid nav overlap */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px; /* Add gap between text and logo */
+
     .text-zone {
-      left: 5%;
-      width: 50%;
+      max-width: 90%;
+      padding-right: 0;
+      order: 1;
+    }
+
+    .logo-container {
+      order: 2;
     }
 
     .logo {
-      right: 5%;
-      height: 300px;
-      max-width: 40%;
+      height: 250px;
+      max-width: 350px;
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 64px;
     }
 
     .sub-header {
-      font-size: 28px;
+      font-size: 40px;
+      margin-bottom: 15px;
+
+      &::before {
+        left: 50px; /* Position tag inline to the left */
+        margin-top: 3px; /* Align vertically with text */
+      }
+    }
+
+    .header {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .contact {
+      justify-content: center; /* Center the contact buttons */
+      gap: 20px;
     }
   }
 }
@@ -142,69 +200,66 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .home-page {
+    padding: 100px 20px 40px 20px; /* Increase top padding for nav space */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
+    min-height: 100vh;
+
     .text-zone {
-      position: relative;
-      left: auto;
-      top: auto;
-      transform: none;
-      width: 100%;
-      max-height: none;
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 100vh;
+      max-width: 100%;
+      padding-right: 0;
+      order: 1;
     }
 
-    /* Hide logo on mobile */
-    .logo {
-      display: none;
+    .logo-container {
+      display: none; /* Hide logo on mobile */
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 48px;
     }
 
     .sub-header {
-      font-size: 24px;
-      margin-bottom: 1rem;
+      font-size: 32px;
+      margin-bottom: 15px;
 
       &::before {
-        display: none; /* Hide HTML tags on mobile for cleaner look */
+        display: none; /* Hide HTML tags on mobile */
       }
     }
 
     .header {
-      margin-bottom: 1rem;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
 
       &::after {
-        display: none; /* Hide HTML tags on mobile for cleaner look */
+        display: none; /* Hide HTML tags on mobile */
       }
     }
 
     h2 {
-      margin-top: 1rem;
+      margin-top: 20px;
+      margin-bottom: 30px;
       font-size: 14px;
     }
 
-    div {
-      .contact {
-        margin-top: 2rem;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      .flat-button {
+        padding: 10px 32px;
+        font-size: 14px;
       }
 
       a {
-        margin-right: 0;
-        float: none;
-      }
-
-      .flat-button {
-        float: none;
-        padding: 12px 32px;
-        font-size: 14px;
-        margin-bottom: 1rem;
+        display: inline-flex;
+        align-items: center;
       }
     }
   }
@@ -213,16 +268,14 @@
 /* Small Mobile Styles */
 @media (max-width: 480px) {
   .home-page {
-    .text-zone {
-      padding: 1.5rem 1rem;
-    }
+    padding: 90px 15px 30px 15px;
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
     }
 
     .sub-header {
-      font-size: 20px;
+      font-size: 24px;
     }
 
     .header {
@@ -233,17 +286,22 @@
       font-size: 13px;
     }
 
-    div {
-      .contact {
-        margin-top: 1.5rem;
-      }
+    .contact {
+      gap: 12px;
 
       .flat-button {
-        padding: 10px 24px;
+        padding: 8px 24px;
         font-size: 13px;
         letter-spacing: 0.5px;
       }
     }
+  }
+}
+
+/* Hide background HTML tags on mobile and tablet */
+@media (max-width: 1024px) {
+  .tags {
+    display: none !important;
   }
 }
 

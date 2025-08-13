@@ -10,8 +10,8 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const firstArray = "Hey, I'm Faye".split('')
-  const nameArray = 'Web developer &'.split('')
-  const jobArray = 'web designer.'.split('')
+  const nameArray = 'Web developer'.split('')
+  const jobArray = '& web designer.'.split('')
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,6 +22,7 @@ const Home = () => {
   return (
     <>
       <div className="container home-page">
+        <img className="logo" src={FayeLogo} alt="S" />
         <div className="text-zone">
           <h1 className="sub-header">
             <AnimatedLetters
@@ -30,7 +31,6 @@ const Home = () => {
               idx={10}
             />
           </h1>
-          <br />
           <h1 className="header">
             <AnimatedLetters
               letterClass={letterClass}
@@ -65,7 +65,6 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <img className="logo" src={FayeLogo} alt="S" />
       </div>
       <Loader type="line-scale-pulse-out" />
     </>
