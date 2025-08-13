@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import Logo from './Logo'
+import FayeLogo from '../../assets/images/fayelogocolor.png'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -65,7 +65,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <Logo />
+        <img className="logo" src={FayeLogo} alt="S" />
       </div>
       <Loader type="line-scale-pulse-out" />
     </>
