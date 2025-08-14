@@ -56,8 +56,6 @@
       position: absolute;
       margin-top: -40px;
       opacity: 0.6;
-      animation: fadeIn 1s 3.2s backwards;
-    
     }
   }
 
@@ -176,8 +174,8 @@
       margin-bottom: 15px;
 
       &::before {
-        left: 50px; /* Position tag inline to the left */
-        margin-top: 3px; /* Align vertically with text */
+        left: 58px; /* Position tag inline to the left */
+        margin-top: 2px; /* Align vertically with text */
       }
     }
 
@@ -200,7 +198,7 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .home-page {
-    padding: 100px 20px 40px 20px; /* Increase top padding for nav space */
+    padding: 120px 20px 40px 20px; /* Increase top padding for nav space */
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -219,12 +217,14 @@
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 56px;
+      line-height: 1.0;
     }
 
     .sub-header {
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 28px;
+      margin-bottom: 20px;
+      line-height: 1.1;
 
       &::before {
         display: none; /* Hide HTML tags on mobile */
@@ -232,8 +232,9 @@
     }
 
     .header {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       letter-spacing: -2px;
+      line-height: 1.0;
 
       &::after {
         display: none; /* Hide HTML tags on mobile */
@@ -242,19 +243,19 @@
 
     h2 {
       margin-top: 20px;
-      margin-bottom: 30px;
-      font-size: 14px;
+      margin-bottom: 40px;
+      font-size: 16px;
     }
 
     .contact {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 30px;
+      justify-content: flex-start; /* Align to left like in mockup */
+      gap: 20px;
 
       .flat-button {
-        padding: 10px 32px;
-        font-size: 14px;
+        padding: 12px 36px;
+        font-size: 16px;
       }
 
       a {
@@ -268,10 +269,10 @@
 /* Small Mobile Styles */
 @media (max-width: 480px) {
   .home-page {
-    padding: 90px 15px 30px 15px;
+    padding: 110px 15px 30px 15px;
 
     h1 {
-      font-size: 36px;
+      font-size: 48px;
     }
 
     .sub-header {
@@ -283,15 +284,15 @@
     }
 
     h2 {
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .contact {
-      gap: 12px;
+      gap: 15px;
 
       .flat-button {
-        padding: 8px 24px;
-        font-size: 13px;
+        padding: 10px 28px;
+        font-size: 14px;
         letter-spacing: 0.5px;
       }
     }
